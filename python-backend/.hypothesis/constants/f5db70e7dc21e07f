@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\comparison.py
+# hypothesis_version: 6.151.9
+
+[100, 'actionability', 'candidate-obsolete', 'classification', 'comparison-engine', 'confidenceInterval', 'confidenceLevel', 'createdAt', 'createdBy', 'freeTextInput', 'goldenSetCaseCount', 'hasInstabilitySignal', 'id', 'intentFamily', 'intentId', 'intentLabel', 'isProtected', 'lower', 'matched', 'method', 'missing', 'narrow', 'normalizedIntent', 'normalizedStatus', 'observedShare', 'originalSourceId', 'originalValues', 'outcomeVariability', 'overrepresented', 'paraphraseGroupId', 'protected-retained', 'protectedClass', 'protectedClassHint', 'protectedClasses', 'real-only', 'realInputCount', 'representationDelta', 'runId', 'sampleSize', 'sanitizedText', 'sourceTestCaseId', 'uncoveredVariants', 'underrepresented', 'updatedAt', 'upper', 'version', 'wilson-score']

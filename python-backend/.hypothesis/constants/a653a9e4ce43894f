@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\intent_config.py
+# hypothesis_version: 6.151.12
+
+['UNDETERMINED', 'canonicalOptions', 'canonicalStatuses', 'catalog', 'catalogVersion', 'condition', 'continue', 'defaultStatus', 'defaultUnmapped', 'description', 'disambiguationRules', 'exactPhrases', 'intentClass', 'intentFamily', 'intentId', 'intentLabel', 'nonEnglishPatterns', 'normalization', 'onMatch', 'optionNormalization', 'patterns', 'piiIndicators', 'priorityScore', 'protectedCase', 'protectedClass', 'protectedFlag', 'ruleId', 'spellingVariants', 'statusNormalization', 'synonyms', 'terminate']

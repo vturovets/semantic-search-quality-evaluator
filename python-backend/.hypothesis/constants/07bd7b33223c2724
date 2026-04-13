@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\parser.py
+# hypothesis_version: 6.151.9
+
+[65279, '\x00', ' {2,}', '"', '""', '+', ',', ', ', '.', '1.0', '::', '; ', 'Business requirement', 'CSV file is empty', 'Free-text input', 'Scenario', 'Source Test Case#', 'Test Case#', 'Variant Type', '[', '\\r?\\n', '\\r\\n|\\n', '\\{(ADDRESS|NAME)\\}', ']', '^-?\\d+(\\.\\d+)?$', '^status:\\s*', 'accuracy-golden-set', 'businessRequirement', 'canonicalIntent', 'data', 'error', 'expectedOptions', 'expectedStatus', 'false', 'field', 'freeTextInput', 'goldenSetVersion', 'message', 'null', 'observedAt', 'pii-related', 'protectedClassHint', 'query', 'real-input', 'recordId', 'records', 'reference-catalog', 'row', 'sanitizedText', 'scenario', 'severity', 'sourceTestCaseId', 'status-mapping', 'status:', 'statusCode', 'testCaseId', 'true', 'undefined', 'variantId', 'warning', '|']

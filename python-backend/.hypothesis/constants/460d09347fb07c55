@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\api\recommendations.py
+# hypothesis_version: 6.151.9
+
+[100, 200, 404, 'error', 'priority', 'proposed_action', 'reason', 'status', 'true', 'updated_at']

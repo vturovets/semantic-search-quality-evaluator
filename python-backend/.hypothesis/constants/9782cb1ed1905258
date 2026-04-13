@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\consistency_metrics.py
+# hypothesis_version: 6.151.9
+
+['hasInstability', 'hasInstabilitySignal', 'intentId', 'normalizedIntent', 'normalizedStatus', 'outcomeVariability', 'statuses']

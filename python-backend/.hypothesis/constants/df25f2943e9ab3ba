@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\storage\__init__.py
+# hypothesis_version: 6.151.12
+
+['InMemoryStorage', 'StorageRepository', 'get_storage']

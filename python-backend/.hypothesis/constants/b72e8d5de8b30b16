@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\api\errors.py
+# hypothesis_version: 6.151.9
+
+[400, 403, 404, 409, 500, 'Validation failed', 'currentStatus', 'details', 'error', 'requiresBaQaApproval', 'validTransitions']

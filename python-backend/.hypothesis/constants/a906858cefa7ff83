@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\models\enums.py
+# hypothesis_version: 6.151.9
+
+['PROTECTED', 'SUPPORTED', 'UNKNOWN', 'UNSUPPORTED', 'accuracy-golden-set', 'action-ready', 'add-new-intent', 'analyst-reviewed', 'analyzing', 'approval-register', 'approved', 'archived', 'candidate-obsolete', 'change-proposal', 'completed', 'created', 'critical', 'csv', 'draft', 'failed', 'golden-only', 'high', 'implemented', 'importing', 'json', 'low', 'markdown', 'matched', 'medium', 'missing', 'monitor', 'narrow', 'no-update', 'non-english', 'normalizing', 'overrepresented', 'pii-related', 'po-review-pending', 'policy-blocked', 'protected-override', 'protected-retained', 'real-input', 'real-only', 'recommendation-list', 'reference-catalog', 'rejected', 'run-summary', 'status-mapping', 'underrepresented', 'unsupported-intent', 'wording-gap-table']

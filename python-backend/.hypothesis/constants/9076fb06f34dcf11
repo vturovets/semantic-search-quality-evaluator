@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\schemas.py
+# hypothesis_version: 6.151.9
+
+['accuracy-golden-set', 'analyst', 'analyst-reviewed', 'appliedOptions', 'approval-register', 'approve', 'approved', 'archived', 'ba_qa', 'businessMeaning', 'businessRequirement', 'canonicalIntent', 'change-proposal', 'critical', 'csv', 'draft', 'expectedOptions', 'expectedStatus', 'freeTextInput', 'frequency', 'goldenSetVersion', 'high', 'implemented', 'json', 'low', 'markdown', 'medium', 'non-english', 'observedAt', 'pii-related', 'po', 'po-review-pending', 'policy-blocked', 'priorityWeight', 'protectedClass', 'protectedClassHint', 'real-input', 'recommendation-list', 'recordId', 'reference-catalog', 'region', 'reject', 'rejected', 'run-summary', 'sanitizedText', 'scenario', 'sourceChannel', 'sourceTestCaseId', 'status-mapping', 'statusClass', 'statusCode', 'testCaseId', 'unsupported-intent', 'variantId', 'wording-gap-table']

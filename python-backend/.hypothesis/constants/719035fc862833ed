@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\api\exports.py
+# hypothesis_version: 6.151.9
+
+[200, 404, 'action-ready', 'actionReadyIntents', 'actionability', 'approval-register', 'approved', 'candidate-obsolete', 'change-proposal', 'classification', 'confidenceLevel', 'critical', 'csv', 'error', 'golden-only', 'goldenOnlyIntents', 'goldenSetCaseCount', 'implemented', 'json', 'markdown', 'matched', 'matchedIntents', 'materialityThreshold', 'meetsMinSampleSize', 'monitor', 'monitorIntents', 'narrow', 'observationWindow', 'overrepresented', 'priority', 'protected-retained', 'real-only', 'realInputCount', 'realInputsAnalyzed', 'realOnlyIntents', 'recommendation-list', 'run-summary', 'system', 'underrepresented', 'wording-gap-table']

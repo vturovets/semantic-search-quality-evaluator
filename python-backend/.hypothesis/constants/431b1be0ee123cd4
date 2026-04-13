@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\protection_rules.py
+# hypothesis_version: 6.151.9
+
+['actionability', 'enabled', 'governance-approved', 'isProtected', 'no-update', 'non-english', 'pii-related', 'policy-blocked', 'protected-override', 'protectedClass', 'protectedClassHint', 'protectedClasses', 'reason', 'type', 'unsupported-intent']

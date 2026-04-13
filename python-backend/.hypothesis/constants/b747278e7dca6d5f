@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\models\requests.py
+# hypothesis_version: 6.151.12
+
+['accuracy', 'accuracyGoldenSetId', 'analyst', 'approve', 'approverRole', 'ba_qa', 'both', 'canonicalIntentCount', 'confidenceLevel', 'consistency', 'coverageMetrics', 'datasetType', 'downloadUrl', 'exportId', 'goldenSet', 'importId', 'intentFamily', 'isValid', 'materialityThreshold', 'minSampleSize', 'observationWindow', 'pageSize', 'po', 'proposedAction', 'protectedCaseRules', 'protectedFlag', 'realInputDatasetId', 'recommendationCount', 'recommendationId', 'recordCount', 'referenceCatalogIds', 'reject', 'rejected', 'runId', 'stabilityMetrics', 'summaryMetrics', 'valid', 'validationIssues', 'validationSummary', 'warnings', 'wordingMetrics']

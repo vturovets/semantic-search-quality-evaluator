@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\api\approvals.py
+# hypothesis_version: 6.151.9
+
+[200, 403, 404, 409, 'advance', 'approve', 'approved', 'ba_qa', 'currentStatus', 'decision', 'error', 'recommendation', 'reject', 'rejected', 'requiresBaQaApproval', 'status', 'updated_at', 'validTransitions']

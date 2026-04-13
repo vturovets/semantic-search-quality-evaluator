@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\coverage_metrics.py
+# hypothesis_version: 6.151.9
+
+[100, 'candidate-obsolete', 'candidate_obsolete', 'classification', 'golden-only', 'goldenSetCaseCount', 'golden_only', 'intentId', 'isProtected', 'matched', 'overrepresented', 'protected-retained', 'protected_retained', 'real-only', 'realInputCount', 'real_only', 'underrepresented']

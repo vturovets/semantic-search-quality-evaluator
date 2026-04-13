@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\models\intent_models.py
+# hypothesis_version: 6.151.9
+
+['ACCURACY', 'CONSISTENCY', 'REAL', 'ambiguityFlag', 'appliedRules', 'canonicalIntentId', 'canonicalIntentLabel', 'catalogVersion', 'comparisonAnchor', 'decisionMethod', 'errorMessage', 'expectedOptions', 'expectedStatus', 'intentClass', 'normalizedStatus', 'observedAt', 'protectedClass', 'rawText', 'sanitizedText', 'sourceGroupId', 'sourceId', 'sourceType']

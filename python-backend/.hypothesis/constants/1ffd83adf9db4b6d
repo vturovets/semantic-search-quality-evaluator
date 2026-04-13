@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\intent_pipeline.py
+# hypothesis_version: 6.151.12
+
+['GENERIC_UNSUPPORTED', 'NO_VALID_MAPPING', 'PII_DETECTED', 'PROTECTED', 'REJECTED_BY_POLICY', 'REJECTED_NON_ENGLISH', 'SUPPORTED', 'UNDETERMINED', 'UNKNOWN', 'UNSUPPORTED', '\\s+', 'highest_priority', 'terminate', 'unknown', 'unknown:ambiguous', 'unknown:no_match', 'unsupported']

@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\api\analyze.py
+# hypothesis_version: 6.151.9
+
+[200, 400, 404, 'accuracy-golden-set', 'actionability', 'completed', 'confidenceInterval', 'error', 'intentId', 'normalizedIntent', 'originalValues', 'protectedClass', 'protectedClassHint', 'real-input', 'realInputCount']

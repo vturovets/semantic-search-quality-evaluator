@@ -1,0 +1,4 @@
+# file: C:\Users\votu\Documents\semantic-search-quality-evaluator\python-backend\engine\priority_rules.py
+# hypothesis_version: 6.151.9
+
+[0.0, 'action-ready', 'critical', 'high', 'low', 'medium', 'monitor', 'protected-override']
