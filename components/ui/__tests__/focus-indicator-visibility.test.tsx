@@ -8,7 +8,6 @@ import * as fc from 'fast-check';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import { ActionButton } from '../action-button';
 import { StatusBadge } from '../status-badge';
-import { DecisionBadge } from '../decision-badge';
 
 // Ensure cleanup after each test
 afterEach(() => {

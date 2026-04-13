@@ -8,7 +8,6 @@ import * as fc from 'fast-check';
 import { render, cleanup } from '@testing-library/react';
 import { ActionButton } from '../action-button';
 import { StatusBadge } from '../status-badge';
-import { DecisionBadge } from '../decision-badge';
 import { SideDrawer } from '../side-drawer';
 import { TooltipInfo } from '../tooltip-info';
 
@@ -71,32 +70,6 @@ describe('Property 30: Semantic markup compliance', () => {
         // Validate that status is communicated through text content
         expect(badge?.textContent).toBeTruthy();
         expect(badge?.textContent).toContain(props.status);
-        
-        return true;
-      }
-    ), { numRuns: 100 });
-  });
-
-  it('should use semantic markup for decision indicators with proper ARIA attributes', () => {
-    fc.assert(fc.property(
-      fc.record({
-        decision: fc.constantFrom('Safe to release', 'Needs more evidence', 'Do not release'),
-        size: fc.constantFrom('sm', 'md', 'lg')
-      }),
-      (props) => {
-        // Clean up before each property test iteration
-        cleanup();
-        
-        const { container } = render(
-          <DecisionBadge decision={props.decision} size={props.size} />
-        );
-        
-        // Validate that decision badge has proper ARIA role
-        const badge = container.querySelector('[role="status"]');
-        expect(badge).toBeInTheDocument();
-        
-        // Validate that decision is communicated through text content
-        expect(badge?.textContent).toBe(props.decision);
         
         return true;
       }
@@ -289,7 +262,7 @@ describe('Property 30: Semantic markup compliance', () => {
   it('should maintain semantic markup consistency across all component variants', () => {
     fc.assert(fc.property(
       fc.record({
-        componentType: fc.constantFrom('button', 'status', 'decision'),
+        componentType: fc.constantFrom('button', 'status'),
         variant: fc.constantFrom('primary', 'secondary', 'default'),
         content: fc.string({ minLength: 1, maxLength: 30 })
       }),
@@ -311,18 +284,9 @@ describe('Property 30: Semantic markup compliance', () => {
           const button = container.querySelector('button');
           expect(button).toBeInTheDocument();
           expect(button?.tagName).toBe('BUTTON');
-        } else if (props.componentType === 'status') {
-          const result = render(
-            <StatusBadge status="COMPLETED" />
-          );
-          container = result.container;
-          
-          // Validate proper ARIA role
-          const badge = container.querySelector('[role="status"]');
-          expect(badge).toBeInTheDocument();
         } else {
           const result = render(
-            <DecisionBadge decision="Safe to release" />
+            <StatusBadge status="COMPLETED" />
           );
           container = result.container;
           

@@ -7,7 +7,6 @@
 import * as fc from 'fast-check';
 import { render, cleanup } from '@testing-library/react';
 import { StatusBadge } from '../status-badge';
-import { DecisionBadge } from '../decision-badge';
 import { KPIStatCard } from '../kpi-stat-card';
 import { ActionButton } from '../action-button';
 import { SideDrawer } from '../side-drawer';
@@ -28,11 +27,6 @@ describe('Property 21: Design system consistency', () => {
         // StatusBadge props
         status: fc.constantFrom('COMPLETED', 'RUNNING', 'FAILED', 'PENDING'),
         statusSize: fc.constantFrom('sm', 'md', 'lg'),
-        
-        // DecisionBadge props
-        decision: fc.constantFrom('Safe to release', 'Needs more evidence', 'Do not release'),
-        decisionSize: fc.constantFrom('sm', 'md', 'lg'),
-        decisionVariant: fc.constantFrom('default', 'prominent'),
         
         // KPIStatCard props
         kpiTitle: fc.string({ minLength: 1, maxLength: 50 }),
@@ -75,21 +69,6 @@ describe('Property 21: Design system consistency', () => {
         
         // Validate consistent border styling
         expect(statusBadge).toHaveClass('border');
-        
-        cleanup();
-        
-        // Test DecisionBadge design consistency
-        const { container: decisionContainer } = render(
-          <DecisionBadge 
-            decision={props.decision} 
-            size={props.decisionSize} 
-            variant={props.decisionVariant} 
-          />
-        );
-        
-        const decisionBadge = decisionContainer.querySelector('span[role="status"]');
-        expect(decisionBadge).toBeInTheDocument();
-        expect(decisionBadge).toHaveClass('inline-flex', 'items-center', 'rounded-full', 'border', 'font-medium');
         
         cleanup();
         
@@ -264,8 +243,7 @@ describe('Property 21: Design system consistency', () => {
       fc.record({
         size: fc.constantFrom('sm', 'md', 'lg'),
         buttonText: fc.string({ minLength: 1, maxLength: 30 }),
-        status: fc.constantFrom('COMPLETED', 'RUNNING', 'FAILED', 'PENDING'),
-        decision: fc.constantFrom('Safe to release', 'Needs more evidence', 'Do not release')
+        status: fc.constantFrom('COMPLETED', 'RUNNING', 'FAILED', 'PENDING')
       }),
       (props) => {
         // Clean up before each property test iteration
@@ -282,37 +260,27 @@ describe('Property 21: Design system consistency', () => {
           <StatusBadge status={props.status} size={props.size} />
         );
         
-        const { container: decisionContainer } = render(
-          <DecisionBadge decision={props.decision} size={props.size} />
-        );
-        
         const button = buttonContainer.querySelector('button');
         const statusBadge = statusContainer.querySelector('span[role="status"]');
-        const decisionBadge = decisionContainer.querySelector('span[role="status"]');
         
         expect(button).toBeInTheDocument();
         expect(statusBadge).toBeInTheDocument();
-        expect(decisionBadge).toBeInTheDocument();
         
         // Validate consistent size patterns
         if (props.size === 'sm') {
           expect(button).toHaveClass('px-3', 'py-1.5', 'text-sm', 'min-h-[32px]');
           expect(statusBadge).toHaveClass('px-2', 'py-1', 'text-xs');
-          expect(decisionBadge).toHaveClass('px-2', 'py-1', 'text-xs');
         } else if (props.size === 'md') {
           expect(button).toHaveClass('px-4', 'py-2', 'text-sm', 'min-h-[40px]');
           expect(statusBadge).toHaveClass('px-3', 'py-1', 'text-sm');
-          expect(decisionBadge).toHaveClass('px-3', 'py-1', 'text-sm');
         } else if (props.size === 'lg') {
           expect(button).toHaveClass('px-6', 'py-3', 'text-base', 'min-h-[44px]');
           expect(statusBadge).toHaveClass('px-4', 'py-2', 'text-base');
-          expect(decisionBadge).toHaveClass('px-4', 'py-2', 'text-base');
         }
         
         // Validate consistent font weight across interactive elements
         expect(button).toHaveClass('font-medium');
         expect(statusBadge).toHaveClass('font-medium');
-        expect(decisionBadge).toHaveClass('font-medium');
       }
     ), { numRuns: 100 });
   });
@@ -401,7 +369,7 @@ describe('Property 21: Design system consistency', () => {
   it('should ensure all components follow the design system color palette and maintain visual hierarchy', () => {
     fc.assert(fc.property(
       fc.record({
-        componentType: fc.constantFrom('status', 'decision', 'kpi', 'metric', 'button'),
+        componentType: fc.constantFrom('status', 'kpi', 'metric', 'button'),
         variant: fc.constantFrom('default', 'success', 'warning', 'danger'),
         content: fc.string({ minLength: 1, maxLength: 50 })
       }),
@@ -418,12 +386,6 @@ describe('Property 21: Design system consistency', () => {
             <StatusBadge status="COMPLETED" />
           );
           container = statusContainer;
-          component = container.querySelector('span[role="status"]');
-        } else if (props.componentType === 'decision') {
-          const { container: decisionContainer } = render(
-            <DecisionBadge decision="Safe to release" />
-          );
-          container = decisionContainer;
           component = container.querySelector('span[role="status"]');
         } else if (props.componentType === 'kpi') {
           const { container: kpiContainer } = render(

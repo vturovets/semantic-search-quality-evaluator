@@ -103,7 +103,7 @@ export function SideDrawer({
       <div className={`absolute top-0 bottom-0 w-full ${sizeStyles[size]} ${positionStyles[position].container}`}>
         <div 
           ref={drawerRef}
-          className={`h-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${positionStyles[position].transform}`}
+          className={`h-full flex flex-col bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${positionStyles[position].transform}`}
           role="dialog"
           aria-modal="true"
           aria-labelledby={title ? 'drawer-title' : undefined}

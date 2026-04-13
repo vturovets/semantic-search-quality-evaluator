@@ -8,7 +8,6 @@ import * as fc from 'fast-check';
 import { render, cleanup } from '@testing-library/react';
 import { ActionButton } from '../action-button';
 import { StatusBadge } from '../status-badge';
-import { DecisionBadge } from '../decision-badge';
 import { KPIStatCard } from '../kpi-stat-card';
 import { MetricCard } from '../metric-card';
 
@@ -112,65 +111,6 @@ describe('Property 32: Color contrast compliance', () => {
         } else if (props.status === 'PENDING') {
           // Gray color scheme for pending
           expect(badge).toHaveClass('bg-gray-100', 'text-gray-800', 'border-gray-200');
-        }
-        
-        return true;
-      }
-    ), { numRuns: 100 });
-  });
-
-  it('should maintain color contrast for decision badges across all decision types', () => {
-    fc.assert(fc.property(
-      fc.record({
-        decision: fc.constantFrom('Safe to release', 'Needs more evidence', 'Do not release'),
-        size: fc.constantFrom('sm', 'md', 'lg'),
-        variant: fc.constantFrom('default', 'prominent')
-      }),
-      (props) => {
-        // Clean up before each property test iteration
-        cleanup();
-        
-        const { container } = render(
-          <DecisionBadge 
-            decision={props.decision} 
-            size={props.size}
-            variant={props.variant}
-          />
-        );
-        
-        const badge = container.querySelector('span[role="status"]');
-        expect(badge).toBeInTheDocument();
-        
-        // Validate that badge uses color classes with adequate contrast
-        const classList = Array.from(badge!.classList);
-        
-        const hasBackgroundColor = classList.some(c => c.includes('bg-'));
-        const hasTextColor = classList.some(c => c.includes('text-'));
-        const hasBorderColor = classList.some(c => c.includes('border-'));
-        
-        expect(hasBackgroundColor).toBe(true);
-        expect(hasTextColor).toBe(true);
-        expect(hasBorderColor).toBe(true);
-        
-        // Validate decision-specific colors based on variant
-        if (props.variant === 'prominent') {
-          // Prominent variant uses darker backgrounds with white text
-          if (props.decision === 'Safe to release') {
-            expect(badge).toHaveClass('bg-green-600', 'text-white', 'border-green-600');
-          } else if (props.decision === 'Needs more evidence') {
-            expect(badge).toHaveClass('bg-yellow-600', 'text-white', 'border-yellow-600');
-          } else if (props.decision === 'Do not release') {
-            expect(badge).toHaveClass('bg-red-600', 'text-white', 'border-red-600');
-          }
-        } else {
-          // Default variant uses lighter backgrounds with darker text
-          if (props.decision === 'Safe to release') {
-            expect(badge).toHaveClass('bg-green-100', 'text-green-800', 'border-green-200');
-          } else if (props.decision === 'Needs more evidence') {
-            expect(badge).toHaveClass('bg-yellow-100', 'text-yellow-800', 'border-yellow-200');
-          } else if (props.decision === 'Do not release') {
-            expect(badge).toHaveClass('bg-red-100', 'text-red-800', 'border-red-200');
-          }
         }
         
         return true;

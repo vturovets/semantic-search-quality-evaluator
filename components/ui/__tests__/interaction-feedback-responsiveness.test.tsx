@@ -10,7 +10,6 @@ import { ActionButton } from '../action-button';
 import { KPIStatCard } from '../kpi-stat-card';
 import { MetricCard } from '../metric-card';
 import { StatusBadge } from '../status-badge';
-import { DecisionBadge } from '../decision-badge';
 
 // Ensure cleanup after each test
 afterEach(() => {
@@ -223,28 +222,16 @@ describe('Property 22: Interaction feedback responsiveness', () => {
   it('should ensure badge components provide appropriate visual states', () => {
     fc.assert(fc.property(
       fc.record({
-        badgeType: fc.constantFrom('status', 'decision'),
         status: fc.constantFrom('COMPLETED', 'RUNNING', 'FAILED', 'PENDING'),
-        decision: fc.constantFrom('Safe to release', 'Needs more evidence', 'Do not release'),
         size: fc.constantFrom('sm', 'md', 'lg')
       }),
       (props) => {
         // Clean up before each property test iteration
         cleanup();
         
-        let container: HTMLElement;
-        
-        if (props.badgeType === 'status') {
-          const result = render(
-            <StatusBadge status={props.status} size={props.size} />
-          );
-          container = result.container;
-        } else {
-          const result = render(
-            <DecisionBadge decision={props.decision} size={props.size} />
-          );
-          container = result.container;
-        }
+        const { container } = render(
+          <StatusBadge status={props.status} size={props.size} />
+        );
         
         const badge = container.querySelector('span[role="status"]');
         expect(badge).toBeInTheDocument();

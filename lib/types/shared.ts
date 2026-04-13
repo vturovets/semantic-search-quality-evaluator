@@ -10,8 +10,6 @@ export interface DemoConfig {
   productName: string;
   tagline: string;
   navigation: NavigationItem[];
-  defaultSearchQuery: string;
-  samplePrompts: string[];
 }
 
 export interface UIConstants {
@@ -39,12 +37,6 @@ export interface StatusBadgeProps {
   status: 'COMPLETED' | 'RUNNING' | 'FAILED' | 'PENDING';
   icon?: React.ReactNode;
   size?: 'sm' | 'md' | 'lg';
-}
-
-export interface DecisionBadgeProps {
-  decision: 'Safe to release' | 'Needs more evidence' | 'Do not release';
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'prominent';
 }
 
 export interface KPIStatCardProps {

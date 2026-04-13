@@ -7,7 +7,5 @@ export {
 
 export {
   demoConfig,
-  featureFlags,
-  simulationConfig,
-  demoFlow
+  featureFlags
 } from './demo-config';

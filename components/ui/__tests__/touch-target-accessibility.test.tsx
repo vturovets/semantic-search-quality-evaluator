@@ -8,7 +8,6 @@ import * as fc from 'fast-check';
 import { render, cleanup } from '@testing-library/react';
 import { ActionButton } from '../action-button';
 import { StatusBadge } from '../status-badge';
-import { DecisionBadge } from '../decision-badge';
 
 // Ensure cleanup after each test
 afterEach(() => {
@@ -177,28 +176,16 @@ describe('Property 31: Touch target accessibility', () => {
   it('should ensure badge components have adequate size for touch interaction when interactive', () => {
     fc.assert(fc.property(
       fc.record({
-        badgeType: fc.constantFrom('status', 'decision'),
         size: fc.constantFrom('sm', 'md', 'lg'),
-        status: fc.constantFrom('COMPLETED', 'RUNNING', 'FAILED', 'PENDING'),
-        decision: fc.constantFrom('Safe to release', 'Needs more evidence', 'Do not release')
+        status: fc.constantFrom('COMPLETED', 'RUNNING', 'FAILED', 'PENDING')
       }),
       (props) => {
         // Clean up before each property test iteration
         cleanup();
         
-        let container: HTMLElement;
-        
-        if (props.badgeType === 'status') {
-          const result = render(
-            <StatusBadge status={props.status} size={props.size} />
-          );
-          container = result.container;
-        } else {
-          const result = render(
-            <DecisionBadge decision={props.decision} size={props.size} />
-          );
-          container = result.container;
-        }
+        const { container } = render(
+          <StatusBadge status={props.status} size={props.size} />
+        );
         
         const badge = container.querySelector('span[role="status"]');
         expect(badge).toBeInTheDocument();

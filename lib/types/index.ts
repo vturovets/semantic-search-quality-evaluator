@@ -1,35 +1,5 @@
 // Centralized type exports
 
-// Search types
-export type {
-  SearchScenario,
-  ProductResult,
-  FilterItem,
-  TraceStep,
-  LegacySearchScenario
-} from './search';
-
-// Experiment types
-export type {
-  ExperimentSummary,
-  ModelVersion,
-  MetricComparison,
-  MetricValue,
-  ExperimentStatus,
-  LegacyExperimentData
-} from './experiments';
-
-// Release decision types
-export type {
-  ReleaseDecisionScenario,
-  ReleaseRecommendation,
-  StatisticalSummary,
-  HypothesisTest,
-  BusinessInterpretation,
-  DecisionStep,
-  LegacyStatisticalResult
-} from './release';
-
 // Shared types
 export type {
   NavigationItem,
@@ -40,3 +10,6 @@ export type {
   ProgressBarProps,
   TooltipProps
 } from './shared';
+
+// Quality Evaluation types
+export * from '../quality-evaluation/types';

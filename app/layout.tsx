@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'AI Product Experiment Lab',
-  description: 'Validate AI product features with statistical confidence',
+  title: 'Golden Set Coverage Advisor',
+  description: 'Evaluate whether your golden sets still represent real production language',
 }
 
 export default function RootLayout({

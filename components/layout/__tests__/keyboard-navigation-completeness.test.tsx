@@ -29,7 +29,7 @@ afterEach(() => {
 describe('Property 28: Keyboard navigation completeness', () => {
   it('should make all interactive elements reachable and operable via keyboard navigation', () => {
     fc.assert(fc.property(
-      fc.constantFrom('/search', '/experiments', '/release-validation'),
+      fc.constantFrom('/quality-evaluation', '/quality-evaluation/intake', '/quality-evaluation/analysis'),
       fc.record({
         title: fc.string({ minLength: 1, maxLength: 100 }),
         subtitle: fc.option(fc.string({ minLength: 1, maxLength: 200 }), { nil: undefined }),
@@ -312,7 +312,7 @@ describe('Property 28: Keyboard navigation completeness', () => {
 
   it('should maintain proper tab order and focus flow across all interactive elements', () => {
     fc.assert(fc.property(
-      fc.constantFrom('/search', '/experiments', '/release-validation'),
+      fc.constantFrom('/quality-evaluation', '/quality-evaluation/intake', '/quality-evaluation/analysis'),
       fc.array(fc.record({
         type: fc.constantFrom('button', 'input', 'link'),
         text: fc.string({ minLength: 1, maxLength: 50 })
